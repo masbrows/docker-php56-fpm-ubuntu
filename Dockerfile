@@ -56,7 +56,7 @@ RUN sed -i 's|pm.max_children = 5|pm.max_children = 100|g' /etc/php/5.6/fpm/pool
 	&& sed -i 's|pm.min_spare_servers = 1|pm.min_spare_servers = 3|g' /etc/php/5.6/fpm/pool.d/www.conf \
 	&& sed -i 's|pm.max_spare_servers = 3|pm.max_spare_servers = 10|g' /etc/php/5.6/fpm/pool.d/www.conf \
 	&& sed -i 's|;pm.max_requests = 500|pm.max_requests = 200|g' /etc/php/5.6/fpm/pool.d/www.conf \
-	&& sed -i 's|listen = /run/php/php7.1-fpm.sock|listen = 127.0.0.1:9056|g' /etc/php/5.6/fpm/pool.d/www.conf \
+	&& sed -i 's|listen = /run/php/php5.6-fpm.sock|listen = 127.0.0.1:9056|g' /etc/php/5.6/fpm/pool.d/www.conf \
 	&& mkdir --mode 777 /var/run/php \
 	&& chmod -R 777 /run /var/lib/php /etc/php/5.6/fpm/php.ini
 
